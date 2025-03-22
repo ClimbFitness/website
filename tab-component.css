@@ -1,0 +1,300 @@
+/* Tab Component Styles - Namespaced to avoid conflicts */
+.tab-component {
+    padding: 4em 2em;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    font-size: 1.1vw;
+    background-color: var(--bg);
+    width: 100%;
+  }
+  
+  /* CRITICAL FIX: Force horizontal layout by using !important */
+  .tab-component .tab-layout {
+    z-index: 1;
+    grid-row-gap: 3em;
+    flex-direction: row !important; /* Force horizontal layout */
+    flex-flow: row !important; /* Override any flex-flow settings */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 37em;
+    height: 42em;
+    display: flex;
+    position: relative;
+  }
+  
+  .tab-component .tab-layout-col {
+    width: 50% !important; /* Force 50% width */
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    float: none !important; /* Override any float */
+  }
+  
+  .tab-component .tab-container {
+    grid-column-gap: 3em;
+    grid-row-gap: 3em;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100%;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 2.5em;
+    display: flex;
+  }
+  
+  .tab-component .tab-layout-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .tab-component .tab-container-bottom {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    margin-top: auto;
+  }
+  
+  .tab-component .tab-container-top {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 1em;
+  }
+  
+  .tab-component .tab-content-wrap {
+    width: 100%;
+    min-width: auto;
+    height: 150px;
+    position: relative;
+  }
+  
+  .tab-component .content-button__bg {
+    z-index: -1;
+    background-color: #FF4500;
+    border-radius: 0.5em;
+    position: absolute;
+    inset: 0%;
+  }
+  
+  .tab-component .content-p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .tab-component .tab-button__bg {
+    z-index: 0;
+    background-color: rgba(239, 238, 236, 0.06);
+    border: 1px solid rgba(239, 238, 236, 0.08);
+    border-radius: .25em;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0%;
+  }
+  
+  .tab-component .tab-content-item {
+    z-index: 1;
+    grid-column-gap: 1.25em;
+    grid-row-gap: 1em;
+    visibility: hidden;
+    flex-flow: column;
+    display: flex;
+    position: absolute;
+    inset: auto 0% 0%;
+  }
+  
+  .tab-component .tab-content-item.active {
+    visibility: visible;
+  }
+  
+  .tab-component .filter-bar {
+    background-color: rgba(239, 238, 236, 0.06);
+    border: 1px solid rgba(239, 238, 236, 0.08);
+    border-radius: .5em;
+    padding: .5em;
+    display: flex;
+  }
+  
+  .tab-component .filter-button {
+    background-color: transparent;
+    border: 1px solid rgba(239, 238, 236, 0);
+    padding: 1.125em 1.5em;
+    transition: border-color .2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .tab-component .filter-button.active {
+    border-color: rgba(239, 238, 236, 0.3);
+    border-radius: .25em;
+  }
+  
+  .tab-component .filter-button__p {
+    z-index: 1;
+    font-size: 1.125em;
+    position: relative;
+    color: var(--text);
+  }
+  
+  .tab-component .tab-visual-wrap {
+    border-radius: .5em;
+    width: 100%;
+    height: 42em;
+    max-height: 80vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tab-component .tab-visual-item {
+    visibility: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+  }
+  
+  .tab-component .tab-visual-item.active {
+    visibility: visible;
+  }
+  
+  .tab-component .tab-image {
+    object-fit: cover;
+    border-radius: .5em;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+  }
+  
+  .tab-component .tab-content__heading {
+    letter-spacing: -.02em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 1.75em;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text);
+  }
+  
+  .tab-component .tab-layout-heading {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 3.5em;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--text);
+  }
+  
+  .tab-component .tab-content__button {
+    color: #131313;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    margin-top: 1em;
+  }
+  
+  .tab-component .opacity--80 {
+    opacity: 0.8;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media only screen and (max-width: 992px) {
+    .tab-component .tab-layout {
+      flex-direction: column !important; /* Revert to column on smaller screens */
+      width: 100%;
+      max-width: 90%;
+      gap: 3em;
+      height: auto;
+    }
+    
+    .tab-component .tab-layout-col {
+      width: 100% !important; /* Full width on mobile */
+      padding: 0;
+      height: auto;
+    }
+    
+    .tab-component .tab-layout-heading {
+      font-size: 2.5em;
+      max-width: 100%;
+    }
+    
+    .tab-component .tab-content__heading {
+      font-size: 1.8em;
+    }
+    
+    .tab-component .tab-content-wrap {
+      height: 180px;
+    }
+    
+    .tab-component .tab-visual-wrap {
+      height: 450px;
+    }
+    
+    .tab-component {
+      padding: 6em 0;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .tab-component .tab-layout-heading {
+      font-size: 2em;
+    }
+    
+    .tab-component .tab-content__heading {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    
+    .tab-component .content-p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+    
+    .tab-component .tab-content-wrap {
+      height: 220px;
+    }
+    
+    .tab-component .filter-button {
+      padding: 0.7em;
+    }
+    
+    .tab-component .filter-button__p {
+      font-size: 0.9em;
+    }
+    
+    .tab-component .tab-visual-wrap {
+      height: 350px;
+    }
+    
+    .tab-component {
+      padding: 4em 0;
+    }
+  }

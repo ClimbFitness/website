@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climb Fitness</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="tab-component.css">
+  <script src="tab-component.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="nav container">
+    <!-- Logo on the left -->
+    <h2 class="logo">
+      <img src="CLIMB_LOGO.png" alt="Logo" class="logo-image">
+    </h2>
+    
+    
+    <!-- Centered menu items -->
+    <div class="menu">
+      <p data-target="tab-section">Showcase</p>
+      <p data-target="pricing">Pricing</p>
+      <p data-target="partners">Partners</p>
+      <p data-target="contact">Join Beta</p>
+    </div>
+    
+    <!-- Mobile hamburger menu -->
+    <button class="hamburger">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero container">
+    <div class="hero-text">
+      <h1>
+        Start <span class="firsth1">climbing</span> your own mountain. </h1>
+      <p>Get rewarded for <span class="type-text" data-words='["achieving your fitness goals.", "pushing your limits.", "challenging yourself.", "becoming stronger."]' data-wait="3000"></span></p>
+      <div class="buttons">
+        <a class="button primary" href="#tab-section">Beta Test</a>
+        <a class="button secondary" href="#pricing">See Plans</a>
+      </div>
+    </div>
+    
+    <div class="blob-cont">
+      <div class="yellow blob"></div>
+      <div class="red blob"></div>
+      <div class="green blob"></div>
+      
+      <!-- New small text box below blob animation -->
+      <div class="small-text-box">
+        <p>Fitness apps are boring. We ignite you to look past the horizon.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- New centered heading with fade-in animation -->
+  <div class="centered-heading">
+    <h1 class="big-text fade-in-element">We built Climb to empower your fitness journey by providing actual rewards for your achievements.
+        
+    </h1>
+
+    <br><br><br><br><br><br><br>
+    <div class="blob-cont">
+        <div class="yellow blob"></div>
+        <div class="red blob"></div>
+        <div class="green blob"></div>
+      </div>
+    <br><br><br><br><br><br><br><br>
+    
+
+    <h1 class="big-text fade-in-element"><span class="highlight-text">Steps, Burning Calories, Lifting Heavy;</span> whatever you focus on, we reward.</h1>
+  </div>
+
+  <!-- Tab Component Section -->
+  <section id="tab-section" class="tab-component">
+    <div data-tabs="wrapper" class="tab-layout">
+      <div class="tab-layout-col">
+        <div class="tab-layout-container">
+          <div class="tab-container">
+            <div class="tab-container-top">
+              <h1 class="tab-layout-heading">Personalize your goals and what you deserve.</h1>
+              <div data-flip-button="wrap" data-tabs="nav" class="filter-bar">
+                <button data-tabs="button" data-flip-button="button" class="filter-button active">
+                  <div class="filter-button__p">Goals</div>
+                  <div data-flip-button="bg" class="tab-button__bg"></div>
+                </button>
+                <button data-tabs="button" data-flip-button="button" class="filter-button">
+                  <div class="filter-button__p">Rewards</div>
+                </button>
+                <button data-tabs="button" data-flip-button="button" class="filter-button">
+                  <div class="filter-button__p">Insights</div>
+                </button>
+              </div>
+            </div>
+            <div class="tab-container-bottom">
+              <div data-tabs="content-wrap" class="tab-content-wrap">
+                <div data-tabs="content-item" class="tab-content-item active">
+                  <h2 data-tabs-fade="" class="tab-content__heading">Step 1. Visionary</h2>
+                  <p data-tabs-fade="" class="content-p opacity--80">Plan whatever fitness/health goals you want to work towards.</p>
+                </div>
+                <div data-tabs="content-item" class="tab-content-item">
+                  <h2 data-tabs-fade="" class="tab-content__heading">Step 2. Executioner</h2>
+                  <p data-tabs-fade="" class="content-p opacity--80">We'll fuel you to push - but it's your mountain to climb.</p>
+                </div>
+                <div data-tabs="content-item" class="tab-content-item">
+                  <h2 data-tabs-fade="" class="tab-content__heading">Step 3. Celebration</h2>
+                  <p data-tabs-fade="" class="content-p opacity--80">You won. Pick whatever you want to fuel yourself for next time.</p>
+                </div>
+              </div>
+              <a id="form-button" href="#pricing" class="tab-content__button w-inline-block">
+                <p class="content-p">Join Beta</p>
+                <div class="content-button__bg"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-layout-col">
+        <div data-tabs="visual-wrap" class="tab-visual-wrap">
+          <div data-tabs="visual-item" class="tab-visual-item active">
+            <img src="goalss.png" loading="lazy" class="tab-image">
+          </div>
+          <div data-tabs="visual-item" class="tab-visual-item">
+            <img src="storee.png" loading="lazy" class="tab-image">
+          </div>
+          <div data-tabs="visual-item" class="tab-visual-item">
+            <img src="output-onlinepngtools.png" loading="lazy" class="tab-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stats Bar - Moved from testimonials -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="testimonial-stats">
+        <div class="stat-item">
+          <span class="stat-number">1000+</span>
+          <span class="stat-label">Survey Approvals</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Beta Test Satisfication</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">May 2025</span>
+          <span class="stat-label">Expected Launch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing-section">
+    <div class="pricing-container">
+      <!-- Regular Plan Card -->
+      <div class="pricing-card-large dark">
+        <div class="price-tag">
+          <h2>FREE<span>/for life</span></h2>
+        </div>
+        
+        <div class="plan-toggle">
+
+        </div>
+        
+        <p class="plan-savings">You keep this forever.</p>
+        
+        <p class="plan-description">No complicated gimmicks - a free model that gives you basic access to our app's features.</p>
+        
+        <a href="#" class="plan-button">Become a Climb Member</a>
+      </div>
+      
+      <!-- Lifetime Plan Card -->
+      <div class="pricing-card-large accent">
+        <div class="plan-badge">
+          <span>Explore Benefits</span>
+          <i class="fas fa-question-circle"></i>
+        </div>
+        
+        <div class="price-tag">
+          <h2>$</h2>
+          <h2>6.99<span>/mo</span></h2>
+        </div>
+        
+        <div class="availability-badge">
+          <span>1000/1000 spots left</span>
+        </div>
+        
+        <p class="plan-one-time">Pay monthly, full access.</p>
+        
+        <p class="plan-description">More goals, better rewards, deeper insights - if you are driven and focused on yourself, we want you to make your money's worth.</p>
+        
+        <a href="#" class="plan-button accent">Become a Premium Member</a>
+      </div>
+      
+      <!-- Founding Member Card -->
+      <div class="pricing-card-long">
+        <div class="price-tag">
+            <h2>$13.99<span>/for life</span></h2>
+          <p class="billing-info">Founding Member</p>
+        </div>
+        
+        <div class="availability-badge dark">
+          <span>100/100 spots left</span>
+        </div>
+        
+        <p class="plan-limited">Limited to 100 People.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Integration Section -->
+  <section id="partners" class="partners-section">
+    <div class="section-title partners-title">
+      <div class="partners-title-content">
+        <h2>What We Offer</h2>
+        <p class="section-subtitle">Use your rewards on brands you love</p>
+      </div>
+    </div>
+    
+    <div class="partners-grid">
+      <!-- Nike - Large Card -->
+      <div class="partner-card large" data-category="apparel">
+        <div class="partner-info">
+          <div class="partner-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png" alt="Nike" class="partner-logo-img svg-logo">
+            <h4>Nike</h4>
+          </div>
+          <p>Redeem points for premium Nike performance apparel, footwear and accessories. Earn enough points and unlock exclusive Nike member-only products.</p>
+          <div class="product-image-box">
+            <img src="https://freight.cargo.site/t/original/i/4aac0aafc62703ce3853409f52b6b26216d6ecc4fed219b62e98b492ddd2ef76/Air_Product_Alphafly_Profile_Glow_1.2.jpg" alt="Nike Running Shoes">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Lululemon - Extra Wide Card -->
+      <div class="partner-card extra-wide" data-category="apparel">
+        <div class="partner-info">
+          <div class="partner-header">
+            <img src="lulu.png" alt="Lululemon" class="partner-logo-img no-filter">
+            <h4>Lululemon</h4>
+          </div>
+          <p>Exchange rewards for premium athletic wear designed for yoga, running, and training.</p>
+        </div>
+      </div>
+      
+      <!-- Organika - Medium Card -->
+      <div class="partner-card medium" data-category="supplements">
+        <div class="partner-info">
+          <div class="partner-header">
+            <img src="https://organika.com/cdn/shop/files/organika-logo_295x.png" alt="Organika" class="partner-logo-img svg-logo">
+            <h4>Organika</h4>
+          </div>
+          <p>Redeem rewards for natural health supplements to support your fitness journey.</p>
+        </div>
+      </div>
+      
+      <!-- Canada Protein - Tall Card -->
+      <div class="partner-card tall" data-category="supplements">
+        <div class="partner-info">
+          <div class="partner-header">
+            <img src="canadaprotein.jpg" alt="Canada Protein" class="partner-logo-img no-filter">
+            <h4>Canada Protein</h4>
+          </div>
+          <div class="product-image-box">
+            <img src="https://canadianprotein.com/cdn/shop/products/Whey-Protein-Concentrate-NATURAL-1kg-Chocolate-Milkshake.jpg?v=1694123908&width=1000" alt="Canada Protein Whey Isolate">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Prairie Naturals - Small Card -->
+      <div class="partner-card small" data-category="supplements">
+        <div class="partner-info">
+          <div class="partner-header">
+            <img src="prarie.jpeg" alt="Prairie Naturals" class="partner-logo-img no-filter">
+            <h4>Prairie</h4>
+          </div>
+          <p>Natural wellness products</p>
+        </div>
+      </div>
+      
+      <!-- Alo - Medium Card -->
+      <div class="partner-card medium" data-category="apparel">
+        <div class="partner-info">
+          <div class="partner-header">
+            <img src="alo.png" alt="Alo" class="partner-logo-img no-filter">
+            <h4>Alo</h4>
+          </div>
+          <p>Convert points to credits for yoga-inspired workout gear and studio classes.</p>
+        </div>
+      </div>
+      
+      <!-- New Balance - Medium Card -->
+      <div class="partner-card medium" data-category="apparel">
+        <div class="partner-info">
+          <div class="partner-header">
+            <img src="nb.png" alt="New Balance" class="partner-logo-img">
+            <h4>New Balance</h4>
+          </div>
+          <p>Turn your achievements into premium footwear and performance apparel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="section-title">
+      <h2>Apply to Beta Test</h2>
+      <p class="section-subtitle">Be one of the first to try Climb and help shape the future of fitness rewards</p>
+    </div>
+    
+    <form id="contactForm" class="contact-form" action="https://formsubmit.co/climbfitnessco@gmail.com" method="POST">
+      <!-- FormSubmit.co configuration -->
+      <input type="hidden" name="_subject" value="New Beta Test Application">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="#contact">
+      
+      <div class="form-group">
+        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      
+      <div class="form-group">
+        <textarea id="message" name="message" class="form-control" placeholder="Tell us why you're interested in beta testing Climb" required></textarea>
+      </div>
+      
+      <button type="submit" class="button primary" style="width: 100%;">Apply Now</button>
+    </form>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-section">
+        <h2><i class="fas fa-mountain logo-icon"></i> Climb</h2>
+        <p>Turning fitness into rewards.<br>Making every workout count.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="#tab-section">Showcase</a></p>
+        <p><a href="#pricing">Pricing</a></p>
+        <p><a href="#partners">Partners</a></p>
+        <p><a href="#contact">Join Beta</a></p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> climbfitnessco@gmail.com</p>
+      </div>
+    </div>
+    
+    <div class="copyright container">
+      <p>&copy; 2025 Climb Fitness Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <svg>
+    <filter id='noiseFilter'>
+      <feTurbulence 
+        type='fractalNoise' 
+        baseFrequency='0.6' 
+        stitchTiles='stitch'/>
+       <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+          <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+          <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
