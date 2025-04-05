@@ -16,7 +16,7 @@
     z-index: 1;
     grid-row-gap: 3em;
     flex-direction: row !important; /* Force horizontal layout */
-    flex-flow: row !important; /* Override any flex-flow settings */
+    flex-flow: row nowrap !important; /* Override any flex-flow settings */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -227,6 +227,10 @@
   
   /* Media Queries for Responsive Design */
   @media only screen and (max-width: 992px) {
+    .tab-component {
+      font-size: 16px; /* Switch to fixed font size for better mobile scaling */
+    }
+    
     .tab-component .tab-layout {
       flex-direction: column !important; /* Revert to column on smaller screens */
       width: 100%;
@@ -255,46 +259,151 @@
     }
     
     .tab-component .tab-visual-wrap {
-      height: 450px;
+      height: auto;
+      min-height: 400px;
+      max-height: 500px;
     }
     
     .tab-component {
       padding: 6em 0;
     }
+    
+    .tab-component .tab-visual-item {
+      position: relative;
+      height: auto;
+      min-height: 400px;
+    }
+    
+    .tab-component .tab-image {
+      max-height: 500px;
+      height: auto;
+    }
   }
   
   @media only screen and (max-width: 768px) {
-    .tab-component .tab-layout-heading {
-      font-size: 2em;
+    .tab-component {
+      padding: 3em 1em;
+      font-size: 14px; /* Further reduce font size for mobile */
     }
     
-    .tab-component .tab-content__heading {
+    /* IMPORTANT: Preserve row layout but scaled down */
+    .tab-component .tab-layout {
+      display: flex;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      gap: 1em;
+      height: auto;
+      min-height: 0;
+      max-height: none;
+    }
+    
+    .tab-component .tab-layout-col {
+      padding: 0 5px;
+    }
+    
+    .tab-layout-container {
+      padding: 0;
+    }
+    
+    .tab-container {
+      padding: 1.5em;
+    }
+    
+    .tab-container-top {
+      gap: 1.5em;
+      margin-bottom: 1.5em;
+    }
+    
+    .tab-container-bottom {
+      padding-top: 1.5em;
+    }
+    
+    .tab-layout-heading {
+      font-size: 1.8em;
+      line-height: 1.2;
+    }
+    
+    .filter-bar {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .filter-button {
+      padding: 0.6em 1em;
+    }
+    
+    .tab-content-wrap {
+      height: auto;
+      min-height: 120px;
+    }
+    
+    .tab-image {
+      max-height: 300px;
+      object-fit: contain;
+    }
+    
+    .tab-visual-wrap {
+      min-height: 220px;
+      max-height: 250px;
+      border-radius: 0.5em;
+      overflow: hidden;
+    }
+    
+    .tab-component .tab-visual-item {
+      position: relative;
+      min-height: 220px;
+      justify-content: center;
+    }
+    
+    .tab-component .tab-image {
+      height: auto;
+      max-height: 250px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .tab-component {
+      padding: 2em 0.5em;
+      font-size: 12px; /* Smallest font size for tiny screens */
+    }
+    
+    .tab-layout-heading {
       font-size: 1.5em;
-      margin-bottom: 1em;
     }
     
-    .tab-component .content-p {
-      font-size: 1em;
-      line-height: 1.5;
+    .filter-button {
+      padding: 0.5em 0.8em;
     }
     
-    .tab-component .tab-content-wrap {
-      height: 220px;
+    .filter-button__p {
+      font-size: 0.8em;
     }
     
-    .tab-component .filter-button {
-      padding: 0.7em;
+    .tab-content__heading {
+      font-size: 1.3em;
     }
     
-    .tab-component .filter-button__p {
+    .content-p {
       font-size: 0.9em;
     }
     
-    .tab-component .tab-visual-wrap {
-      height: 350px;
+    .tab-visual-wrap {
+      min-height: 180px;
+      max-height: 200px;
     }
     
-    .tab-component {
-      padding: 4em 0;
+    .tab-component .tab-visual-item {
+      min-height: 180px;
+    }
+    
+    .tab-component .tab-image {
+      max-height: 180px;
+    }
+    
+    .tab-content__button {
+      padding: 0.7em 1.2em;
+      font-size: 0.9em;
     }
   }

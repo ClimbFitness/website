@@ -624,6 +624,28 @@ function init() {
   }
 }
 
+// Fix for mobile viewport height issues
+function setMobileHeight() {
+  // First we get the viewport height and multiply it by 1% to get a value for a vh unit
+  let vh = window.innerHeight * 0.01;
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set the height initially
+setMobileHeight();
+
+// Reset on resize or orientation change
+window.addEventListener('resize', () => {
+  // Prevent excessive calculations by using a timeout
+  clearTimeout(window.resizedFinished);
+  window.resizedFinished = setTimeout(() => {
+    setMobileHeight();
+  }, 250);
+});
+
+window.addEventListener('orientationchange', setMobileHeight);
+
 
 
 

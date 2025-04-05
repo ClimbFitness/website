@@ -40,7 +40,355 @@ html {
   .cloneable {
     padding: 6em 0;
   }
-}:root {
+  
+  /* Better hero layout for tablet */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0.5em;
+    gap: 2em;
+  }
+  
+  .hero-text {
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+  }
+  
+  .blob-cont {
+    position: relative;
+    right: 0;
+    margin: 0 auto;
+  }
+  
+  /* Adjust pricing cards for tablets */
+  .pricing-container {
+    flex-direction: column;
+    gap: 2em;
+  }
+  
+  .pricing-card-large, .pricing-card-long {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* General layout adjustments */
+  .container {
+    padding: 0 1em;
+    max-width: 100%;
+  }
+  
+  /* Navigation fixes */
+  .hamburger {
+    display: block;
+    z-index: 150;
+  }
+  
+  .menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: var(--bg);
+    width: 80%;
+    height: 100vh; /* Fallback */
+    height: calc(var(--vh, 1vh) * 100); /* Use the custom property */
+    justify-content: center;
+    padding: 2em;
+    transition: var(--transition);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+  
+  .menu.active {
+    right: 0;
+  }
+  
+  .hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Tab section responsive */
+  .tab-layout-heading {
+    font-size: 2em;
+  }
+  
+  .tab-content__heading {
+    font-size: 1.5em;
+  }
+  
+  .content-p {
+    font-size: 1em;
+  }
+  
+  .tab-content-wrap {
+    height: 150px;
+  }
+  
+  .filter-button {
+    padding: 0.7em;
+  }
+  
+  .filter-button__p {
+    font-size: 0.9em;
+  }
+  
+  .tab-visual-wrap {
+    height: 350px;
+  }
+  
+  .cloneable {
+    padding: 4em 0;
+  }
+  
+  /* Better hero section for mobile */
+  .hero {
+    padding: 1em 0.5em 2em;
+    min-height: 80vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 80);
+    margin-top: 2em;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .firsth1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+  
+  .buttons {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  .button {
+    min-width: 140px;
+    padding: 0.8em 1.5em;
+  }
+  
+  /* Adjust blob animations for mobile */
+  .blob-cont {
+    height: 400px;
+    width: 100%;
+    transform: scale(0.8);
+  }
+  
+  .yellow {
+    top: 200px;
+    left: 150px;
+    height: 150px;
+    width: 150px;
+  }
+  
+  .green {
+    top: 50px;
+    right: 100px;
+    height: 150px;
+    width: 200px;
+  }
+  
+  .red {
+    right: 100px;
+    top: 200px;
+    height: 180px;
+    width: 160px;
+  }
+  
+  /* Adjust stats bar for mobile */
+  .testimonial-stats {
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 1.5em;
+  }
+  
+  .stat-number {
+    font-size: 1.8em;
+  }
+  
+  /* Adjust partner grid for mobile */
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .partner-card.medium {
+    grid-column: span 2;
+  }
+  
+  .partner-card.large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .partner-card.extra-wide {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .partner-card.tall {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  /* Text adjustments */
+  .small-text-box {
+    right: 4px;
+    bottom: 10px;
+  }
+  
+  .big-text {
+    font-size: 2.2rem;
+  }
+  
+  /* Centered heading adjustments */
+  .centered-heading {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
+  
+  /* Form adjustments */
+  .contact-form {
+    width: 95%;
+    max-width: 500px;
+  }
+  
+  /* Footer adjustments */
+  .footer-content {
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+  }
+  
+  .footer-section {
+    width: 100%;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Core text adjustments */
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  /* Hero further adjustments */
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .firsth1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  /* Blob animation fine-tuning */
+  .blob-cont {
+    height: 300px;
+    transform: scale(0.7);
+  }
+  
+  /* Small text box */
+  .small-text-box {
+    width: 80px;
+  }
+  
+  .small-text-box p {
+    font-size: 0.8rem;
+  }
+  
+  /* Main text headings */
+  .big-text {
+    font-size: 1.6rem;
+  }
+  
+  /* Adjust spacing */
+  .centered-heading {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  /* Tab section adjustments */
+  .tab-layout-heading {
+    font-size: 1.5em;
+  }
+  
+  .tab-container {
+    padding: 1em;
+  }
+  
+  .filter-bar {
+    flex-wrap: wrap;
+  }
+  
+  /* Form and contact adjustments */
+  .form-control {
+    font-size: 0.9rem;
+    padding: 0.8em;
+  }
+  
+  /* Partner section */
+  .partners-title h2 {
+    font-size: 2em;
+  }
+  
+  .partners-grid {
+    gap: 0.8em;
+  }
+  
+  .partner-card {
+    padding: 0.8em;
+  }
+  
+  .partner-info h4 {
+    font-size: 1.2em;
+  }
+  
+  .partner-info p {
+    font-size: 0.8em;
+  }
+  
+  /* Pricing cards */
+  .price-tag h2 {
+    font-size: 2em;
+  }
+  
+  .plan-description {
+    font-size: 0.9rem;
+  }
+}
+
+:root {
   --bg: #070606;
   --text: #f7f7f7;
   --yellow: #EDB74D;
@@ -58,6 +406,7 @@ html {
   --color-light: #f7f7f7;
   --size-font: 16px;
   --container-padding: 4em 0.5em;
+  --vh: 1vh; /* Default value, will be set by JS */
 }
 
 body {
@@ -911,76 +1260,6 @@ textarea.form-control {
   display: flex;
   position: relative;
 }
-@media only screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-    z-index: 150;
-  }
-  
-  .menu {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    flex-direction: column;
-    background-color: var(--bg);
-    width: 80%;
-    height: 100vh;
-    justify-content: center;
-    padding: 2em;
-    transition: var(--transition);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .menu.active {
-    right: 0;
-  }
-  
-  .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
-  
-  /* Tab section responsive */
-  .tab-layout-heading {
-    font-size: 2em;
-    
-  }
-  
-  .tab-content__heading {
-    font-size: 1.5em;
-  }
-  
-  .content-p {
-    font-size: 1em;
-  }
-  
-  .tab-content-wrap {
-    height: 150px;
-  }
-  
-  .filter-button {
-    padding: 0.7em;
-  }
-  
-  .filter-button__p {
-    font-size: 0.9em;
-  }
-  
-  .tab-visual-wrap {
-    height: 350px;
-  }
-  
-  .cloneable {
-    padding: 4em 0;
-  }
-}
 
 /* Mobile Menu */
 .hamburger {
@@ -999,73 +1278,10 @@ textarea.form-control {
   background-color: var(--text);
   transition: var(--transition);
 }
-
-/* Mobile Menu */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 10px;
-}
-
-.hamburger-line {
-  display: block;
-  width: 25px;
-  height: 2px;
-  margin: 5px auto;
-  background-color: var(--text);
-  transition: var(--transition);
-}
-
-@media only screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-    z-index: 150;
-  }
-  
-  .menu {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    flex-direction: column;
-    background-color: var(--bg);
-    width: 80%;
-    height: 100vh;
-    justify-content: center;
-    padding: 2em;
-    transition: var(--transition);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .menu.active {
-    right: 0;
-  }
-  
-  .hamburger.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
-}
-
 
 .highlight-text {
   color: var(--accent); /* This uses your existing orange accent color */
 }
-
-
-
-
-
-
-
 
 /* Small text box styling */
 .small-text-box {
@@ -1372,9 +1588,9 @@ textarea.form-control {
 .partner-logo-img.no-filter {
   filter: none;
   background-color: transparent;
-  width: 50px; /* Further reduced from 70px */
+  width: 50px;
   height: auto;
-  padding: 2px; /* Further reduced padding */
+  padding: 2px;
   border-radius: 4px;
 }
 
@@ -1382,9 +1598,9 @@ textarea.form-control {
 .partner-logo-img.fallback-logo {
   filter: none;
   background-color: white;
-  width: 55px; /* Further reduced from 80px */
+  width: 55px;
   height: auto;
-  padding: 3px; /* Further reduced padding */
+  padding: 3px;
   border-radius: 4px;
 }
 
@@ -1424,53 +1640,127 @@ textarea.form-control {
   grid-row: initial;
 }
 
-.partner-logo {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8em;
-  font-weight: 700;
-  color: var(--accent);
-  background: rgba(255, 69, 0, 0.06);
-  border-radius: 0.5em;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 69, 0, 0.1);
+/* Improved Partners Grid for Mobile - Preserve desktop layout but scaled */
+@media only screen and (max-width: 768px) {
+  .partners-section {
+    padding: 3em 0.5em;
+  }
+  
+  .partners-title h2 {
+    font-size: 2.5em;
+  }
+  
+  .section-subtitle {
+    font-size: 1em;
+  }
+  
+  /* Preserve the grid layout with 6 columns but scaled down */
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 0.8em;
+  }
+  
+  /* Maintain original card spans for proper layout */
+  .partner-card.large {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  
+  .partner-card.extra-wide {
+    grid-column: span 6;
+    grid-row: span 1;
+    padding: 1em;
+  }
+  
+  /* For the Lululemon extra-wide card, adjust the content layout */
+  .partner-card.extra-wide .partner-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .partner-card.extra-wide .partner-logo-img {
+    width: 35px;
+  }
+  
+  .partner-card.extra-wide .partner-info p {
+    margin-top: 0.5em;
+  }
+  
+  .partner-card.medium {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+  
+  .partner-card.small {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .partner-card.tall {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  /* Scale down card content */
+  .partner-card {
+    padding: 0.8em;
+    border-radius: 0.8em;
+  }
+  
+  .partner-header {
+    margin-bottom: 0.5em;
+  }
+  
+  .partner-logo-img {
+    width: 30px;
+    height: auto;
+  }
+  
+  .partner-info h4 {
+    font-size: 1em;
+  }
+  
+  .partner-info p {
+    font-size: 0.8em;
+    line-height: 1.4;
+  }
+  
+  .product-image-box {
+    height: 120px;
+    margin-top: 0.8em;
+  }
+  
+  .partner-card.large .product-image-box {
+    height: 140px;
+  }
+  
+  .partner-card.tall .product-image-box {
+    height: 180px;
+  }
 }
 
-.large .partner-logo {
-  height: 120px;
-  font-size: 2.5em;
-}
-
-.partner-card:hover .partner-logo {
-  background: rgba(255, 69, 0, 0.1);
-  transform: translateY(-5px);
-}
-
-.partner-info h4 {
-  margin: 0 0 0.5em;
-  font-size: 1.8em;
-  font-weight: 500;
-  color: var(--text);
-}
-
-.large .partner-info h4 {
-  font-size: 2.2em;
-}
-
-.partner-info p {
-  margin: 0;
-  font-size: 0.9em;
-  line-height: 1.5;
-  color: var(--text);
-  opacity: 0.7;
-}
-
-/* Responsive adjustments */
-@media only screen and (max-width: 992px) {
+/* Further refinements for smaller screens */
+@media only screen and (max-width: 480px) {
+  .partners-section {
+    padding: 2em 0.5em;
+  }
+  
+  .partners-title h2 {
+    font-size: 2em;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9em;
+  }
+  
+  /* Adjust to 4 columns for very small screens but maintain layout concept */
   .partners-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 0.5em;
   }
   
   .partner-card.large {
@@ -1483,34 +1773,52 @@ textarea.form-control {
     grid-row: span 1;
   }
   
+  .partner-card.medium {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .partner-card.small {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
   .partner-card.tall {
     grid-column: span 2;
     grid-row: span 2;
   }
-}
-
-@media only screen and (max-width: 768px) {
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
+  
+  /* Further scale down card content */
+  .partner-card {
+    padding: 0.6em;
+    border-radius: 0.6em;
   }
   
-  .partner-card.medium {
-    grid-column: span 2;
+  .partner-logo-img {
+    width: 25px;
   }
   
-  .partner-card.large {
-    grid-column: span 2;
-    grid-row: span 1;
+  .partner-info h4 {
+    font-size: 0.9em;
   }
   
-  .partner-card.extra-wide {
-    grid-column: span 2;
-    grid-row: span 1;
+  .partner-info p {
+    font-size: 0.7em;
+    line-height: 1.3;
+    margin-top: 0.2em;
   }
   
-  .partner-card.tall {
-    grid-column: span 2;
-    grid-row: span 1;
+  .product-image-box {
+    height: 90px;
+    margin-top: 0.5em;
+  }
+  
+  .partner-card.large .product-image-box {
+    height: 110px;
+  }
+  
+  .partner-card.tall .product-image-box {
+    height: 130px;
   }
 }
 
@@ -1663,5 +1971,89 @@ textarea.form-control {
   height: auto;
   max-width: 35px;
   object-fit: contain;
+}
+
+/* Container adjustments for better mobile experience */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+  position: relative;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for mobile overflow issues */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Hero section refinements */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+  min-height: 80vh;
+  padding: 2em 0;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+  z-index: 1;
+}
+
+/* Override for very small screens */
+@media only screen and (max-width: 360px) {
+  .blob-cont {
+    height: 250px;
+    transform: scale(0.6);
+  }
+  
+  h1, .firsth1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+  
+  .button {
+    min-width: 120px;
+    padding: 0.7em 1.2em;
+  }
+  
+  .pricing-card-large, .pricing-card-long {
+    padding: 1.5em 1em;
+  }
+  
+  .contact-form {
+    padding: 1.2em;
+  }
+  
+  .form-control {
+    padding: 0.7em;
+  }
+  
+  /* Text on small mobile */
+  .big-text {
+    font-size: 1.4rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
 }
 
